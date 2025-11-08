@@ -22,18 +22,23 @@
    ```bash
    sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
 
-2. Clone or download
+2. Clone or download or use `curl` command bellow:
+   
+   skip step 3 using curl:
+   ```bash
+   sudo curl https://raw.githubusercontent.com/xbucd/sysctl/refs/heads/main/99-hardening.conf -o /etc/sysctl.d/99-hardening.conf
+   # this command will download 99-hardening.conf to /etc/sysctl.d/
 
 3. Copy desired config to `/etc/ssh/sshd_config.d`:
    ```bash
    sudo cp 99-security.conf /etc/ssh/sshd_config.d/
    
-5. Enable and check service status:
+4. Enable and check service status:
    ```bash
    sudo systemctl enable sshd
    sudo systemctl status sshd
 
-6. Reload service:
+5. Reload config service:
    ```bash
    sudo systemctl reload sshd
 
