@@ -26,8 +26,8 @@
    
    skip step 3 using curl:
    ```bash
-   sudo curl https://raw.githubusercontent.com/xbucd/sysctl/refs/heads/main/99-hardening.conf -o /etc/sysctl.d/99-hardening.conf
-   # this command will download 99-hardening.conf to /etc/sysctl.d/
+   sudo curl https://raw.githubusercontent.com/xbucd/sshd_config/refs/heads/main/99-security.conf -o /etc/ssh/sshd_config.d/99-security.conf
+   # this command will download 99-security.conf to /etc/ssh/sshd_config.d/
 
 3. Copy desired config to `/etc/ssh/sshd_config.d`:
    ```bash
